@@ -1,0 +1,24 @@
+[project]
+name = "test-edp"
+version = "0.1.0"
+description = "Test EDP functionality"
+authors = [
+  { name = "Mark A. Jensen", email = "mark.jensen@nih.gov" }
+]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "bento-meta",
+  "bento-mdf",
+  "bento-sts",
+  "hatchling>=1.28.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+bento-meta = { git = "https://github.com/CBIIT/bento-meta.git", branch = "DATATEAM-547-549/edp-features", subdirectory = "python" }
+bento-mdf = { git = "https://github.com/CBIIT/bento-mdf.git", branch = "DATATEAM-547-549/edp-features", subdirectory = "python" }
+bento-sts = { git = "https://github.com/CBIIT/bento-sts-fastapi.git", branch = "DATATEAM-555/edp-endpoints" }
