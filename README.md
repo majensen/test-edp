@@ -69,7 +69,12 @@ from bento_mdf.mdf import MDF
 mdf = MDF("test-model-edp-enum.yml")
 model = mdf.model
 terms = model.nodes['participant'].props['race'].terms
-print( [x.handle for x in terms] )
+print( [x for x in terms] )
+```
+* Should get back
+```
+['American Indian or Alaska Native', 'Not allowed to collect', 'Not Reported', 'Asian', 'Unknown', 'White', \
+ 'Native Hawaiian or other Pacific Islander', 'Black or African American']
 ```
 
 GLHF
