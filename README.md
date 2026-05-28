@@ -49,7 +49,7 @@ To start an STS pointing to a suitable MDB:
 
 * Start the service in a separate terminal: cd to the test-edp directory and run
 ```
-uv run uvicorn run bento_sts.sts:app
+uv run uvicorn bento_sts.sts:app
 ```
 It will continue running, emitting log messages.
 
